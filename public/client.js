@@ -13,7 +13,7 @@ $(function() {
     });
   });
 
-  $('form').submit(function(event) {
+  $('form1').submit(function(event) {
     event.preventDefault();
     var dream = $('input').val();
     $.post('/dreams?' + $.param({dream: dream}), function() {
