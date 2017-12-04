@@ -15,6 +15,10 @@ app.use(express.static('public'));
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
+//This path deals with the file upload.
+app.post("/", function (request, response) {
+  
+});
 
 
 
