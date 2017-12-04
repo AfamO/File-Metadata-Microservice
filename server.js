@@ -19,7 +19,10 @@ app.get("/", function (request, response) {
 app.post("/", function (request, response) {
   
 });
-
+app.post('/upload/file', upload.single('upload'), function (req, res, next) {
+  // req.file is the `avatar` file 
+  // req.body will hold the text fields, if there were any 
+})
 
 
 

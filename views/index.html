@@ -30,8 +30,7 @@
       
       <section class="dreams">
         <ul id="dreams">
-          <strong>Allows one to upload a file:</strong> To achieve this try out: <strong>https://honeysuckle-lace.glitch.me/api/imagesearch/Your?offset=5 </strong>
-          Where 'Your' is any word or phrase in the image title you want to search for in the  images database. 5 is the number of you results you want returned.
+          <strong>Allows one to upload a file:</strong> To achieve this try out: Use the form below, upload a file and click 'Submit File'
         </ul>
         <ul id="dreams1">
           <strong>Get the size of the uploaded file in json format as an output or result</strong> To achieve this try out: <strong>https://honeysuckle-lace.glitch.me/api/latest/imagesearch</strong>
@@ -40,8 +39,8 @@
       </section>
       
       <p>Submit a file to view its filesize:</p>
-      <form>
-        <input type="file" placeholder="Upload"><button type="submit">Submit File</button>
+      <form action="/upload/file" method="post">
+        <input type="file" name ="upload" ><button type="submit">Submit File</button>
       </form>
     </main>
 
