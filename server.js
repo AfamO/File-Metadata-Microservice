@@ -17,7 +17,7 @@ app.use(express.static('public'));
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
-
+// This is the code that processes the post request
 app.post('/get-file-size', upload.single('upload'), function (req, res, next) {
   // req.file is the `upload` file 
   // req.body will hold the text fields, if there were any 
