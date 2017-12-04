@@ -4,6 +4,8 @@
 // init project
 var express = require('express');
 var app = express();
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -19,9 +21,10 @@ app.get("/", function (request, response) {
 app.post("/", function (request, response) {
   
 });
-app.post('/upload/file', upload.single('upload'), function (req, res, next) {
-  // req.file is the `avatar` file 
+app.post('/get-file-size', upload.single('upload'), function (req, res, next) {
+  // req.file is the `upload` file 
   // req.body will hold the text fields, if there were any 
+  res.send(JSON.stringify(req.body));
 })
 
 
