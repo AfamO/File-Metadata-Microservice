@@ -21,7 +21,13 @@ app.get("/", function (request, response) {
 app.post('/get-file-size', upload.single('upload'), function (req, res, next) {
   // req.file is the `upload` file 
   // req.body will hold the text fields, if there were any 
-  res.send(JSON.stringify(req.file));
+  //res.send(JSON.stringify(req.file));
+  var jsonFileSize={
+    size:req.file.size
+  }
+  res.send(jsonFileSize);
+  //res.send(JSON.stringify(req.file));
+  
 })
 
 
