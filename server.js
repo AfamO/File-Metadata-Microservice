@@ -18,8 +18,8 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 //This path deals with the file upload.
-app.post("/", function (request, response) {
-  
+app.post("/get-file-size", function (request, response) {
+   response.send("Ok");
 });
 app.post('/get-file-size', upload.single('upload'), function (req, res, next) {
   // req.file is the `upload` file 
